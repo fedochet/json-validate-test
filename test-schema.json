@@ -3,6 +3,7 @@
    "title": "Product",
   "description": "A product from Acme's catalog",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "productId": {
       "description": "The unique identifier for a product",
