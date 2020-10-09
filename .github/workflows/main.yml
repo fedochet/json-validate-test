@@ -31,7 +31,7 @@ jobs:
         run: sudo npm install -g ajv-cli 
       
       - name: Validate json schema
-        run: ajv -s ./test-schema.json -d ./test.yml
+        run: ajv --errors=text --all-errors -s ./test-schema.json -d ./test.yml
       
       - name: Validate JSON with action
         uses: docker://orrosenblatt/validate-json-action:latest
