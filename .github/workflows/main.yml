@@ -32,3 +32,9 @@ jobs:
       
       - name: Validate json schema
         run: ajv -s ./test-schema.json -d ./test.yml
+      
+      - name: Validate JSON with action
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ./test-schema.json
+          INPUT_JSONS: ./test.json
